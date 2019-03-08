@@ -16,7 +16,7 @@ const NumberViz: React.FunctionComponent<Props> = ({ value }) => {
 		draw(ctx, value);
 	});
 
-	return <canvas ref={canvas} width={500} height={500} />;
+	return <canvas ref={canvas} width={200} height={250} />;
 };
 
 export default NumberViz;
