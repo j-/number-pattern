@@ -12,9 +12,7 @@ const NumberViz: React.FunctionComponent<Props> = ({ value }) => {
 
 	React.useEffect(() => {
 		const ctx = canvas.current.getContext('2d');
-		if (!ctx) {
-			return;
-		}
+		if (!ctx) return;
 		draw(ctx, value);
 	});
 
