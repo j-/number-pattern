@@ -7,19 +7,23 @@ export interface Props {
 const NumberForm: React.FunctionComponent<Props> = ({ onSubmitValue }) => {
 	const [value, setValue] = React.useState('');
 
-	const submitHandler: React.FormEventHandler<HTMLFormElement> = (e) => {
+	const formSubmitHandler: React.FormEventHandler<HTMLFormElement> = (e) => {
 		e.preventDefault();
 		onSubmitValue(value);
 	};
 
+	const inputChangeHandler: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+		setValue(e.currentTarget.value);
+	};
+
 	return (
-		<form className="card card-body" onSubmit={submitHandler}>
+		<form className="card card-body" onSubmit={formSubmitHandler}>
 			<input
 				type="text"
 				className="form-control"
 				placeholder="Number"
 				value={value}
-				onChange={(e) => setValue(e.currentTarget.value)}
+				onChange={inputChangeHandler}
 			/>
 			<br />
 			<button
