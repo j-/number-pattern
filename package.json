@@ -12,13 +12,28 @@
     "start": "react-scripts-j start",
     "build": "react-scripts-j build",
     "test": "react-scripts-j test --env=jsdom",
-    "eject": "react-scripts-j eject"
+    "eject": "react-scripts-j eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@types/jest": "^24.0.9",
     "@types/node": "^11.10.5",
     "@types/react": "^16.8.7",
     "@types/react-dom": "^16.8.2",
+    "gh-pages": "^2.0.1",
     "typescript": "^3.3.3333"
-  }
+  },
+  "description": "Visualize numpad patterns",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-/number-pattern.git"
+  },
+  "author": "Jamie Hoeks <j@skeoh.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j-/number-pattern/issues"
+  },
+  "homepage": "https://skeoh.com/number-pattern"
 }
