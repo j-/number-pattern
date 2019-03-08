@@ -2,7 +2,7 @@ import * as React from 'react';
 import NumberForm from './NumberForm';
 import NumberViz from './NumberViz';
 
-const App: React.StatelessComponent = () => {
+const App: React.FunctionComponent = () => {
 	const [value, setValue] = React.useState('');
 
 	return (
